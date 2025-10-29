@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Login Demo</title>
+<style>
+  body {
+    background: #0a0a0a;
+    color: #00ff9d;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .login-box {
+    background: #111;
+    padding: 30px;
+    border: 1px solid #00ff9d;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 20px #00ff9d44;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  input {
+    background: #000;
+    color: #00ff9d;
+    border: 1px solid #00ff9d;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  button {
+    background: #00ff9d;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: #00cc7a;
+  }
+  .message {
+    margin-top: 15px;
+    color: #ff4444;
+  }
+</style>
+</head>
+<body>
+
+<div class="login-box">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button onclick="login()">Login</button>
+  <div class="message" id="msg"></div>
+</div>
+
+<script>
+  // Simulated user (for demonstration)
+  const validUser = { username: "admin", password: "Coffee123" };
+
+  // login function
+  function login() {
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value.trim();
+    const msg = document.getElementById("msg");
+
+    if (!user || !pass) {
+      msg.textContent = "Please fill in all fields.";
+      return;
+    }
+
+    // simulate "checking credentials" locally
+    if (user === validUser.username && pass === validUser.password) {
+      msg.style.color = "#00ff9d";
+      msg.textContent = "Access Granted!";
+    } else {
+      msg.style.color = "#ff4444";
+      msg.textContent = "Access Denied!";
+    }
+  }
+</script>
+
+</body>
+</html>
