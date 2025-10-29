@@ -1,0 +1,89 @@
+:root {
+  --bg: #000;
+  --text: #00ffcc;
+  --danger: #ff3366;
+  --border: #00ffcc;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  width: 320px;
+  box-shadow: 0 0 12px var(--border);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #000;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: var(--border);
+  color: #000;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ffaa;
+}
+
+.msg {
+  margin-top: 10px;
+  min-height: 20px;
+  font-size: 13px;
+  color: var(--danger);
+  text-align: center;
+}
+
+.success {
+  color: var(--text);
+}
+
+.meta, .small {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  color: #999;
+}

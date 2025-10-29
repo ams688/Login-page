@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Secure Login Demo</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" id="card">
+      <h1>Secure Login Demo</h1>
+
+      <form id="loginForm" autocomplete="off" novalidate>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+        <div class="actions">
+          <button type="submit" id="submitBtn">Login</button>
+          <button type="button" id="clearBtn">Clear</button>
+        </div>
+
+        <div class="msg" id="msg" aria-live="polite"></div>
+        <div class="small">Open the browser console (F12) to see debug logs and any errors.</div>
+      </form>
+
+      <div class="meta">This is a client-only demo. Real auth must happen on a server.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
